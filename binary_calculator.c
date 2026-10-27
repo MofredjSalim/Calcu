@@ -73,7 +73,7 @@ void delete_zeros(char *sn) {
 		}
 	}
 
-	sn[strlen(sn) - c] = '\0';
+	sn[strlen(sn) - c + b] = '\0';
 }
 
 // It converts from decimal to any base.
