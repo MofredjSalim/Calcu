@@ -216,14 +216,14 @@ void other_subtraction(char *sn1, char *sn2, char *res, int base) {
     if(max == 1) 
     	for(int i = size - 1; i >= 0; i--) {
     		if(sn1[i] >= sn2[i] + carry) {
-    			if((sn1[i] >= 'A') && (sn2[i] >= 'A')) rint = sn1[i] - (sn2[i] + carry) + 20;
+    			if((sn1[i] >= 'A') && (sn2[i] >= 'A')) rint = sn1[i] - (sn2[i] + carry);
     			else if((sn1[i] >= 'A') || (sn2[i] >= 'A')) rint = sn1[i] - (sn2[i] + carry) - 7;
         		else rint = sn1[i] - (sn2[i] + carry);
         		carry = 0;
         	}
        		else {
         		if((sn1[i] >= 'A') && (sn2[i] >= 'A')) rint = sn1[i] + base - (sn2[i] + carry);
-        		else if((sn1[i] >= 'A') || (sn2[i] >= 'A')) rint = sn1[i] + base - (sn2[i] + carry) - 7;
+        		else if((sn1[i] >= 'A') || (sn2[i] >= 'A')) rint = sn1[i] + base - (sn2[i] + carry) + 7;
         		else rint = sn1[i] + base - (sn2[i] + carry);
         		carry = 1;
         	}
@@ -240,8 +240,8 @@ void other_subtraction(char *sn1, char *sn2, char *res, int base) {
         		carry = 0;
         	}
        		else {
-        		if((sn1[i] >= 'A') && (sn2[i] >= 'A')) rint = sn2[i] + base - (sn1[i] + carry) + 20;
-        		else if((sn1[i] >= 'A') || (sn2[i] >= 'A')) rint = sn2[i] + base - (sn1[i] + carry) - 7;
+        		if((sn1[i] >= 'A') && (sn2[i] >= 'A')) rint = sn2[i] + base - (sn1[i] + carry);
+        		else if((sn1[i] >= 'A') || (sn2[i] >= 'A')) rint = sn2[i] + base - (sn1[i] + carry) + 7;
         		else rint = sn2[i] + base - (sn1[i] + carry);
         		carry = 1;
         	}
